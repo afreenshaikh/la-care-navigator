@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>LA Care Navigator — RSI Scorecard</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="rsi.js" defer></script>
+</head>
+<body>
+  <header>
+    <div class="brand-wrap">
+      <div class="brand-mark">⟳</div>
+      <div>
+        <div class="brand">RSI Scorecard</div>
+        <div class="brand-sub">Separate admin-style view for recursive self-improvement</div>
+      </div>
+    </div>
+    <span class="badge">Operator view</span>
+  </header>
+
+  <main>
+    <section class="shell">
+      <div class="intro-copy">
+        <div class="eyebrow">Recursive self-improvement</div>
+        <h1>Evaluate, propose, approve, and track intake-policy changes.</h1>
+        <p>This page is separate from the user intake UI. It shows the scorecard, test results, and patch workflow for the bounded RSI loop.</p>
+      </div>
+
+      <div class="panel">
+        <div class="panel-header">
+          <div>
+            <h2>Current scorecard</h2>
+            <p class="muted">Development and holdout suites measure whether the intake policy asks the right missing questions without repeating supplied ones.</p>
+          </div>
+        </div>
+        <div id="metrics" class="summary-grid"></div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-header">
+          <div>
+            <h2>Current policy</h2>
+            <p class="muted">These are the only intake flags the bounded proposer is allowed to change.</p>
+          </div>
+        </div>
+        <pre id="policy"></pre>
+      </div>
+
+      <div class="panel">
+        <div class="panel-header">
+          <div>
+            <h2>Improvement controls</h2>
+            <p class="muted">Generate the next proposed patch, then approve or reject it after reviewing the score changes.</p>
+          </div>
+        </div>
+        <div class="button-row admin-row">
+          <button id="propose" class="primary" type="button">Propose next improvement</button>
+          <button id="refresh" class="secondary" type="button">Refresh scorecard</button>
+        </div>
+        <div id="candidate"></div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-header">
+          <div>
+            <h2>Evaluation details</h2>
+            <p class="muted">Development cases train the bounded proposer. Holdout and safety checks gate deployment.</p>
+          </div>
+        </div>
+        <div id="evaluations"></div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-header">
+          <div>
+            <h2>Version history</h2>
+            <p class="muted">Approved changes persist in the server state and affect later navigation responses.</p>
+          </div>
+        </div>
+        <div id="history"></div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

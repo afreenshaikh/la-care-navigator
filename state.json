@@ -1,0 +1,50 @@
+{
+  "version": 4,
+  "policy": {
+    "ask_language": true,
+    "ask_travel": true,
+    "ask_service": true
+  },
+  "history": [
+    {
+      "version": 2,
+      "change": {
+        "key": "ask_language",
+        "before": false,
+        "after": true
+      },
+      "reason": "Development scenarios missed the language preference. Ask only when not already supplied.",
+      "approved_by": "local demo operator",
+      "development_passed": 1,
+      "holdout_passed": 1
+    },
+    {
+      "version": 3,
+      "change": {
+        "key": "ask_travel",
+        "before": false,
+        "after": true
+      },
+      "reason": "Development scenarios missed the travel preference. Ask only when not already supplied.",
+      "approved_by": "local demo operator",
+      "development_passed": 2,
+      "holdout_passed": 1
+    },
+    {
+      "version": 4,
+      "change": {
+        "key": "ask_service",
+        "before": false,
+        "after": true
+      },
+      "reason": "Development scenarios missed the service preference. Ask only when not already supplied.",
+      "approved_by": "local demo operator",
+      "development_passed": 3,
+      "holdout_passed": 3
+    }
+  ],
+  "pending": {
+    "done": true,
+    "message": "No more supported patches. This bounded rule-based proposer has exhausted its three changes; it cannot invent new capabilities."
+  }
+}

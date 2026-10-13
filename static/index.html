@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>LA Care Navigator</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="main.js" defer></script>
+</head>
+<body>
+  <header>
+    <div class="brand-wrap">
+      <div class="brand-mark">✚</div>
+      <div>
+        <div class="brand">LA Care Navigator</div>
+        <div class="brand-sub">Los Angeles County care intake</div>
+      </div>
+    </div>
+    <span class="badge">Fictional demo only</span>
+  </header>
+
+  <main>
+    <section class="shell">
+      <div class="intro-copy">
+        <h1>Tell us what care you’re looking for.</h1>
+        <p>This educational prototype gathers basic care-navigation details and then shows general next steps with official resource links.</p>
+      </div>
+
+      <div class="warning"><strong>Not medical care.</strong> This tool cannot diagnose, prescribe, or rule out emergencies. If you think this is an emergency, call 911.</div>
+
+      <form id="intake" class="panel intake-panel">
+        <div class="panel-header">
+          <div>
+            <h2>Patient intake</h2>
+          </div>
+        </div>
+
+        <label for="symptoms">Concern</label>
+        <textarea id="symptoms" name="symptoms" maxlength="2000" placeholder="Example: I want to find a primary care clinic"></textarea>
+
+        <div class="form-grid">
+          <div>
+            <label for="zip">LA County ZIP code</label>
+            <input id="zip" name="zip" inputmode="numeric" pattern="[0-9]{5}" maxlength="5" placeholder="90012">
+          </div>
+          <div>
+            <label for="insurance">Insurance status</label>
+            <select id="insurance" name="insurance">
+              <option value="">Select status</option>
+              <option value="uninsured">No insurance</option>
+              <option value="insured">Have insurance</option>
+              <option value="unsure">Unsure</option>
+            </select>
+          </div>
+        </div>
+
+        <label for="language">Preferred language</label>
+        <input id="language" name="language" maxlength="100" placeholder="Spanish, English, …">
+
+        <label for="travel">Travel constraints</label>
+        <input id="travel" name="travel" maxlength="200" placeholder="Within 5 miles, bus accessible">
+
+        <label for="service">Type of care needed</label>
+        <input id="service" name="service" maxlength="100" placeholder="Primary care, dental, or unsure">
+
+        <div class="button-row">
+          <button class="primary" type="submit">Continue</button>
+          <button type="button" id="example" class="secondary">Use example</button>
+        </div>
+
+        <p class="small subtle-box">No account, cookies, or intake storage. Submitted values are processed in memory only.</p>
+      </form>
+
+      <div id="results" class="results-hidden" aria-live="polite"></div>
+    </section>
+  </main>
+</body>
+</html>
